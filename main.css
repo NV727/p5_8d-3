@@ -1,3 +1,7 @@
+@font-face{
+font-family: 'Verve';
+src: url("verve/Verve.ttf");
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0vw;
@@ -52,19 +56,23 @@ ol li:hover {
 ol li::before {
   content: counter(step);
   position: absolute;
-  left: 15px;
-  top: 15px;
-  width: 30px;
-  height: 30px;
+  left: 10px;
+  top: 10px;
+  width: 5vw;
+  height: 5vw;
   background: #a0522d;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1em;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-size:3.5vw;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+#water{
+  position:relative;
+  left:55%;
 }
 .item img {
   max-width: 100%;
@@ -142,9 +150,6 @@ section {
   padding: 4vw;
   text-align: justify;
 }
-.bahan2 {
-  margin-left:0;
-}
 #history img,
 #makna img,
 #proses img{
@@ -165,50 +170,14 @@ section {
   font-size: 4vw;
   margin: 4vw 0;
 }
-ol {
-  counter-reset: step;
-  list-style: none;
-  padding: 0;
-}
-ol li {
-  counter-increment: step;
-  margin-bottom: 20px;
-  padding-left: 50px;
-  position: relative;
-  background: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-ol li:hover {
-  transform: translateY(-3px);
-}
-ol li::before {
-  content: counter(step);
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  width: 30px;
-  height: 30px;
-  background: #a0522d;
-  color: white;
-  font-weight: bold;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.1em;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
 footer {
   background-color: #a0522d;
-  color: white;
+  color:white;
   text-align: center;
   padding: 4vw 2vw;
   font-size: 3.5vw;
 }
-.item, .item2{
+.item{
   background: #8a5004;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -221,21 +190,44 @@ footer {
 .langkah{
   margin-right:1vw;
 }
-.item:hover, .item2:hover {
+.item:hover {
   transform: translateY(-5px);
 }
-.bahan2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 600px;
-  width: 100%;
-  margin: auto;
-  margin-top: 20px;
+#canting:hover::after{
+  content:'Memberi lilin pada pola batik';
 }
-
-.bahan2 > * {
-  width: 100%; /* ensure grid items stretch */
+#lilin:hover::after{
+  content:'Menutupi pola pada batik';
+}
+#mori:hover::after{
+  content:'Sebagai media membatik';
+}
+#remasol:hover::after{
+  content:'Sebagai pewarna';
+}
+#kompor:hover::after{
+  content:'Untuk memanaskan lilin dan air';
+}
+#wajan:hover::after{
+  content:'Sebagai wadah bagi lilin dan air';
+}
+#glass:hover::after{
+  content:'Mengikat warna pada area yang diberikan Waterglass';
+}
+#gas:hover::after{
+  content:'Bahan bakar kompor';
+}
+#water:hover::after{
+  content:'Pelarut remasol dan untuk melorotkan lilin';
+}
+#hasil p{
+  background:#ffffff;
+  padding:3vw;
+  border-radius:15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#hasil img{
+  width:100%;
 }
 }
 
@@ -246,18 +238,25 @@ footer {
 html{
 scroll-behavior: smooth;
 }
+#makna{
+  margin-bottom:5vw;
+}
 h3{
 justify-content: center;
 text-align:center;
+}
+#hasil p{
+  background:#ffffff;
+  padding:2vw;
+  border-radius:15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width:600px;
 }
 header {
     background-color: #a0522d;
     color: white;
     padding: 0.5vw;
     text-align: center;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Batik_Pattern.svg/2560px-Batik_Pattern.svg.png');
-    background-size: cover;
-    background-blend-mode: multiply;
   }
   .item {
     background: #8a5004;
@@ -279,7 +278,7 @@ header {
   }
   #proses h3{
     text-align:left;
-    margin-left:2vw;
+    margin-left:0vw;
   }
   nav {
     background-color: #8b4513;
@@ -300,9 +299,9 @@ header {
     background-blend-mode:soft-light;
   }
 
-  section {
+  #history{
     padding: 2vw 1vw;
-    margin-left: 5vw;
+    margin-left: 3vw;
     margin-right: 5vw;
   }
 
@@ -319,33 +318,38 @@ header {
     border-radius: 0.5vw;
     box-shadow: 0 0.1vw 0.5vw rgba(0,0,0,0.2);
   }
-
+/*
   footer {
     background-color: #a0522d;
     color: white;
     text-align: center;
-    padding: 1%;
+    padding: 4vw 2vw;
+    font-size: 3.5vw;
+    position:relative;
+    display:block;
+    margin:0;
   }
+    */
   #history img,
   #makna img{
     float:right;
     border-radius:0.5vw;
     width:25rem;
     height:auto;
-    border:black 4px solid;
+    border:black 3px solid;
     box-shadow: 0 0.175vw 0.5vw rgba(0,0,0,0.2);
   }
   #proses{
     padding: 0;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 0;
+    margin-right: 0vw;
   }
   #makna h2{
     justify-content:right;
   }
   h2{
     font-size:2vw;
-    margin-left:1.005vw;
+    margin-left:1vw;
   }
   p {
     font-size:1.25vw;
@@ -358,7 +362,7 @@ margin: 0 0.75vw;
 font-weight: bold;
 position: relative;
 padding: 0.5vw 1vw;
-transition: background-color0.3s ease, color 0.3s ease;
+transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a::after {
@@ -408,7 +412,7 @@ transform-origin: bottom left;
     margin-left: 0;
     width:10vw;
     margin-right: 0;
-    display: block; /* or inline-block or whatever you prefer */
+    display: block;
   }
   #proses h3{
     font-size:2vw;
@@ -416,15 +420,15 @@ transform-origin: bottom left;
   .bahan {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5vw; /* optional spacing between items */
-  max-width: 600px; /* optional max width */
-  margin-left:13vw; /* optional center alignment */
+  gap: 5vw; 
+  max-width: 600px; 
+  margin-left:10vw; 
   margin-top:3vw;
 }
 .item{
   max-width:600px;
 }
-}
+
 #proses img{
   float:right;
   border-radius:0.5vw;
@@ -435,13 +439,16 @@ transform-origin: bottom left;
   margin-bottom:1vw;
 
 }
+.footer{
+  background:#8b4513;
+  padding:15%;
+  padding-left:100%;
+  position:absolute;
+}
 #makna{
   margin-bottom:10vw;
 }
 .item:hover {
-  transform: translateY(-5px);
-}
-.item2:hover {
   transform: translateY(-5px);
 }
 ol {
@@ -468,10 +475,10 @@ ol li::before {
   position: absolute;
   left: 15px;
   top: 15px;
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
   background: #a0522d;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   border-radius: 50%;
   display: flex;
@@ -480,11 +487,43 @@ ol li::before {
   font-size: 1.1em;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-.bahan2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5vw; /* optional spacing between items */
-  max-width: 600px; /* optional max width */
-  margin-left:24.8vw; /* optional center alignment */
-  margin-top:3vw;
+#hasil{
+  margin-bottom:10.5vw;
+}
+#canting:hover::after{
+  content:'Memberi lilin pada pola batik';
+}
+#lilin:hover::after{
+  content:'Menutupi pola pada batik';
+}
+#mori:hover::after{
+  content:'Sebagai media membatik';
+}
+#remasol:hover::after{
+  content:'Sebagai pewarna';
+}
+#kompor:hover::after{
+  content:'Untuk memanaskan lilin dan air';
+}
+#wajan:hover::after{
+  content:'Sebagai wadah bagi lilin dan air';
+}
+#glass:hover::after{
+  content:'Mengikat warna pada area yang diberikan Waterglass';
+}
+#gas:hover::after{
+  content:'Bahan bakar kompor';
+}
+#water:hover::after{
+  content:'Pelarut remasol dan untuk melorotkan lilin';
+}
+#hasil img{
+  height: auto;
+  float:right;
+  display: block;
+  margin: 4vw auto;
+  border-radius: 2vw;
+  position:relative;
+  bottom:100px;
+}
 }
