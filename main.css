@@ -2,6 +2,10 @@
   font-family: 'Verve';
   src: url("verve/Verve.ttf");
   }
+  *, *::before, *::after {
+  box-sizing: border-box;
+}
+
   body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0vw;
@@ -14,10 +18,141 @@
     }
     .i1{
       background-image:inherit  }
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
   * {
     box-sizing: border-box;
   }
+  #intro ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    width: vw;
+    height: 5vw;
+    background: #a0522d;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:3.5vw;
+    max-width:600px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  }
+  #intro ol li {
+  position: relative;
+  padding-left: 10vw;
+  margin-bottom: 2vw;
+}
+
+  main{
+    padding-top: 300px;
+  }
+      .item {
+  transition: transform 0.2s ease;
+}
+.item:hover .arrow{
+  transition: transform 0.3s ease;
+  transform: scale(1.2); 
+}
+.bahan {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.item {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+.item {
+  width: 40vw;
+  background-color: #a65b2f;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.arrow {
+  position:relative;
+  width: 0;
+  height: 0;
+  margin: 10px auto 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #333;
+  transition: transform 0.3s ;
+  transform:translateY(100%);
+  margin-bottom:5vw;
+  z-index:3;
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(160, 82, 45, 0.85);
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  padding: 3vw;
+  z-index: 2;
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.details p{
+    margin-top:15vw;
+    opacity:1;
+    text-align:center;
+}
+.item.open .arrow {
+  transition: transform 0.5s ease;
+  transform: translateY(-45vw) rotate(180deg);
+  overflow:visible;
+  z-index: 3;
+}
+
+    .bahan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;  
+    margin-left:20vw; 
+    margin-top:3vw;
+    justify-content: center;
+
+  }
+.item.open .details {
+  transform: translateY(0);
+}
+
+.item.open .item-header {
+  pointer-events: none;
+}
+.item-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  flex: 1;
+}
   body {
     padding: 0;
     margin: 0;
@@ -70,9 +205,8 @@
     font-size:3.5vw;
     box-shadow: 0 5px 5px rgba(0,0,0,0.2);
   }
-  #water{
-    position:relative;
-    left:55%;
+  #mori .arrow{
+    margin-top:7vw;
   }
   .item img {
     max-width: 100%;
@@ -93,18 +227,13 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
       max-width: 600px;
-      width: 100%; /* force full width */
+      width: 100%;
       margin: auto;
       margin-top:20px;
+      justify-content: center;
   }
-  .bahan2{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 600px;
-    width: 100%; /* force full width */
-    margin: auto;
-    margin-top:20px;
+  #air{
+    margin-left:55%;
   }
   #proses h3{
     text-align: center;
@@ -127,6 +256,11 @@
     font-size:5vw;
   }
   nav {
+        position:sticky;
+      top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #8b4513;
     display: flex;
     flex-wrap: wrap;
@@ -137,7 +271,7 @@
   nav a {
     color: white;
     text-decoration: none;
-    font-size: 5vw;
+    font-size: 4vw;
     padding: 2vw 4vw;
     border-radius: 5vw;
     background-color: #a0522d;
@@ -193,33 +327,6 @@
   .item:hover {
     transform: translateY(-5px);
   }
-  #canting:hover::after{
-    content:'Memberi lilin pada pola batik';
-  }
-  #lilin:hover::after{
-    content:'Menutupi pola pada batik';
-  }
-  #mori:hover::after{
-    content:'Sebagai media membatik';
-  }
-  #remasol:hover::after{
-    content:'Sebagai pewarna';
-  }
-  #kompor:hover::after{
-    content:'Untuk memanaskan lilin dan air';
-  }
-  #wajan:hover::after{
-    content:'Sebagai wadah bagi lilin dan air';
-  }
-  #glass:hover::after{
-    content:'Mengikat warna pada area yang diberikan Waterglass';
-  }
-  #gas:hover::after{
-    content:'Bahan bakar kompor';
-  }
-  #water:hover::after{
-    content:'Pelarut remasol dan untuk melorotkan lilin';
-  }
   #hasil p{
     background:#ffffff;
     padding:3vw;
@@ -234,7 +341,7 @@
   
   
   
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
   html{
   scroll-behavior: smooth;
   }
@@ -267,25 +374,27 @@
       color:white;
       transition: transform 0.2s;
     }
-    .item2 {
-      background: #8a5004;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-      color:white;
-      transition: transform 0.2s;
-    }
     #proses h3{
       text-align:left;
       margin-left:0vw;
     }
     nav {
+      position:sticky;
+      top:0;
+      z-index:1000;
       background-color: #8b4513;
       padding: 0.5vw;
       text-align: center;
     }
-  
+    #intro ol li::before {
+position: relative;
+top:10px;
+  }
+  #intro ol li {
+  position: relative;
+  padding-left: 10vw;
+  margin-bottom: 2vw;
+}
     nav a {
       color: white;
       text-decoration: none;
@@ -318,18 +427,7 @@
       border-radius: 0.5vw;
       box-shadow: 0 0.1vw 0.5vw rgba(0,0,0,0.2);
     }
-  /*
-    footer {
-      background-color: #a0522d;
-      color: white;
-      text-align: center;
-      padding: 4vw 2vw;
-      font-size: 3.5vw;
-      position:relative;
-      display:block;
-      margin:0;
-    }
-      */
+
     #history img,
     #makna img{
       float:right;
@@ -425,9 +523,7 @@
     margin-left:10vw; 
     margin-top:3vw;
   }
-  .item{
-    max-width:600px;
-  }
+
   
   #proses img{
     float:right;
@@ -441,9 +537,9 @@
   }
   .footer{
     background:#8b4513;
-    padding:15%;
     padding-left:100%;
-    position:absolute;
+    position:relative;
+
   }
   #makna{
     margin-bottom:10vw;
@@ -467,6 +563,46 @@
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
   }
+  #intro ol{
+    counter-reset:step;
+  }
+#intro ol li {
+  position: relative;
+  padding-left: 7vw; /* Leave space for the circle */
+  margin-bottom: 2vw;
+  max-width: 600px;
+  width: 90%;
+  margin-left: 10vw;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 8px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex; /* Use flex to align items */
+}
+
+#intro ol li::before {
+  content: counter(step);
+  position: absolute;
+  left: 1vw;
+  width: 5vw;
+  height: 5vw;
+  background: #a0522d;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+#intro h3 {
+  text-align: left;
+  margin-left:6vw;
+}
   ol li:hover {
     transform: translateY(-3px);
   }
@@ -487,43 +623,146 @@
     font-size: 1.1em;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   }
+    #intro ol li::before {
+    content: counter(step);
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 2vw;
+    height: 2vw;
+    background: #a0522d;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
   #hasil{
+    margin-left:2vw;
     margin-bottom:10.5vw;
   }
-  #canting:hover::after{
-    content:'Memberi lilin pada pola batik';
-  }
-  #lilin:hover::after{
-    content:'Menutupi pola pada batik';
-  }
-  #mori:hover::after{
-    content:'Sebagai media membatik';
-  }
-  #remasol:hover::after{
-    content:'Sebagai pewarna';
-  }
-  #kompor:hover::after{
-    content:'Untuk memanaskan lilin dan air';
-  }
-  #wajan:hover::after{
-    content:'Sebagai wadah bagi lilin dan air';
-  }
-  #glass:hover::after{
-    content:'Mengikat warna pada area yang diberikan Waterglass';
-  }
-  #gas:hover::after{
-    content:'Bahan bakar kompor';
-  }
-  #water:hover::after{
-    content:'Pelarut remasol dan untuk melorotkan lilin';
-  }
   #hasil img{
+    margin-right:1000px;
     height: auto;
     float:right;
+    width:40vw;
     display: block;
     margin: 4vw auto;
     border-radius: 2vw;
     position:relative;
     bottom:100px;
+    right:100px;
   }
+    .item {
+  transition: transform 0.2s ease; /* good */
+}
+.item:hover {
+  transform: scale(1.03); /* slightly grow visually */
+}
+.bahan {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.item {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+.item {
+  width: 18vw;
+  background-color: #a65b2f;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 40px;
+  cursor: pointer;
+}
+#intro h2{
+  margin-left:4vw;
+}
+#intro h3{
+  justify-content: left;
+}
+.arrow {
+  position:relative;
+  width: 0;
+  height: 0;
+  margin: 10px auto 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #333;
+  transition: transform 0.3s ease ;
+  z-index:100;
+
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(160, 82, 45, 0.85);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  z-index: 2;
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.details p{
+  margin-top:5vw;
+    opacity:1;
+    text-align:center;
+    margin-right:15px;
+}
+.item.open .arrow {
+      transition: transform 0.3s ease;
+  transform: translateY(-18vw) rotate(180deg);
+  overflow:visible;
+  z-index: 3;
+}
+
+    .bahan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;  
+    margin-left:20vw; 
+    margin-top:3vw;
+
+  }
+.item.open .details {
+  transform: translateY(0);
+}
+
+.item.open .item-header {
+  pointer-events: none;
+}
+.item-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  flex: 1;
+}
+
   }
