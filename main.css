@@ -1,768 +1,194 @@
-@font-face{
-  font-family: 'Verve';
-  src: url("verve/Verve.ttf");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batik Nusantara</title>
+  <style>
+ 
+  </style>
+</head>
+<body>
+  <script>
+  function toggleDetails(el) {
+    el.classList.toggle('open');
   }
-  *, *::before, *::after {
-  box-sizing: border-box;
-}
+</script>
 
-  body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0vw;
-      padding: 0vw;
-      background-color: #eed8c3;
-      color: #3b2f2f;
-    }
-    html{
-      scroll-behavior: smooth !important;
-    }
-    .i1{
-      background-image:inherit  }
-    @media (max-width: 768px) {
-  * {
-    box-sizing: border-box;
-  }
-  #intro ol li::before {
-    content: counter(step);
-    position: absolute;
-    left: 10px;
-    top: 15px;
-    width: vw;
-    height: 5vw;
-    background: #a0522d;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:3.5vw;
-    max-width:600px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-  }
-  #intro ol li {
-  position: relative;
-  padding-left: 10vw;
-  margin-bottom: 2vw;
-}
+  <header>
+    <h1>Batik Nusantara</h1>
+    <h2>Batik Parang</h2>
+    <h3>Oleh kelompok 8D-3</h3>
+  </header>
 
-  main{
-    padding-top: 300px;
-  }
-      .item {
-  transition: transform 0.2s ease;
-}
-.item:hover .arrow{
-  transition: transform 0.3s ease;
-  transform: scale(1.2); 
-}
-.bahan {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
+  <nav>
+    <a href="#intro">Perkenalan</a>
+    <a href="#history">Sejarah dan Filosofi</a>
+    <a href="#proses">Bahan</a>
+    <a href="#langkah">Proses</a>
+    <a href="#hasil">Kesimpulan</a>
+  </nav>
 
-.item {
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+  <section id="intro">
+    <h2>Perkenalan</h2>
+    <h3>Anggota Kelompok 8D-3 :</h3>
+<ol>
+<li>Nathanael Valeriano 8D - 22</li>
+<li>Filippo Russell Prasetyo 8D - 11</li>
+<li>Kaeli Tanagya 8D - 18</li>
+<li>Clarissa Anastasia Santoso 8D - 08</li>
+</ol>
+  </section>
+  <section id="history">
 
-.item img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+    <h2>Sejarah, Makna, dan Filosofi Batik Parang</h2>
+    <img src="https://www.freevector.com/uploads/vector/preview/45694/small_2x_vecteezyindonesia-batik-parang-seamless-patternAW0721_generated.jpg" alt="Gambar Batik Parang">
+    <p>
+      <strong>Sejarah Batik Parang</strong> yaitu Batik Parang merupakan salah satu motif batik tertua di Indonesia yang berasal dari Keraton Mataram di Jawa Tengah pada abad ke-17. Kata "Parang" sendiri berasal dari kata "pereng" yang berarti lereng atau garis miring. Motif ini awalnya diciptakan oleh Sultan Agung dari Mataram, dan dulunya hanya boleh dikenakan oleh keluarga kerajaan. Oleh karena itu, batik Parang sering dianggap sebagai simbol kekuasaan, kebijaksanaan, dan kehormatan. Seiring perkembangan zaman, motif ini kemudian menyebar dan digunakan oleh masyarakat luas, meskipun tetap identik dengan nuansa kerajaan. Batik Parang memiliki berbagai variasi, seperti Parang Rusak, Parang Barong, Parang Kusumo, dan Parang Klitik, yang masing-masing memiliki makna dan aturan pemakaian tersendiri dalam lingkungan keraton. Pada masa itu, motif ini digunakan secara eksklusif oleh bangsawan dan keluarga kerajaan sebagai simbol status dan kekuasaan. Sehingga rakyat biasa tidak boleh menggunakan motif ini, namun sekarang semua orang dari berbagai kalangan sudah biasa menggunakan motif ini bahkan digunakan dalam kehidupan sehari - hari entah sebagai pakaian ataupun sarung. <strong>Makna dan filosofi dari motif Batik Parang</strong> sendiri adalah Parang merupakan motif yang menggambarkan ombak di laut selatan Yogyakarta yang mengenai tebing karang. Bentuk motif tersebut melambangkan kekuasaan, kekuatan, dan semangat yang tak pernah surut. Itu sebabnya batik parang disebut batik larangan karena terlarang untuk rakyat biasa dan hanya boleh dipakai raja beserta keturunannya. Bentuk motif parang yang saling menyambung menggambarkan jalinan hidup yang tidak pernah putus. Bentuk motif ini dinilai menjadi simbol hubungan antara manusia dengan alam, manusia dengan manusia, dan manusia dengan Tuhannya. Sementara itu, garis diagonal yang terdapat dalam motif parang menggambarkan bahwa manusia harus memiliki cita-cita yang luhur, kokoh dalam pendirian, serta setia pada nilai kebenaran. Motif batik parang juga memiliki makna agar tidak mudah menyerah dalam mengarungi bahtera kehidupan.
+<section id="proses">
+  <h2>Bahan dan Alat</h2>
+  <div class="bahan">
 
-.caption {
-  margin-top: 8px;
-  font-weight: bold;
-}
-.item {
-  width: 40vw;
-  background-color: #a65b2f;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-}
+    <div class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/canting.jpg" alt="Canting">
+        <div class="item-title">Canting</div>
+ <div class="arrow"></div>
+      </div>
+      <div class="details">
+               
+        <p><strong>Canting</strong> adalah alat utama untuk menorehkan malam ke kain. Terbuat dari logam dengan pegangan kayu.</p>
+      </div>
+    </div>
 
-.arrow {
-  position:relative;
-  width: 0;
-  height: 0;
-  margin: 10px auto 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 10px solid #333;
-  transition: transform 0.3s ;
-  transform:translateY(100%);
-  margin-bottom:5vw;
-  z-index:3;
-}
+    <div class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/lilin.jpg" alt="Lilin">
+        <div class="item-title">Lilin</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Lilin</strong> atau malam digunakan untuk menahan warna saat proses pencelupan.</p>
+      </div>
+    </div>
 
-.details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-color: rgba(160, 82, 45, 0.85);
-  transform: translateY(100%);
-  transition: transform 0.5s ease;
-  padding: 3vw;
-  z-index: 2;
-  box-sizing: border-box;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.details p{
-    margin-top:15vw;
-    opacity:1;
-    text-align:center;
-}
-.item.open .arrow {
-  transition: transform 0.5s ease;
-  transform: translateY(-45vw) rotate(180deg);
-  overflow:visible;
-  z-index: 3;
-}
+    <div id="mori" class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/mori.png" alt="Kain Mori">
+        <div class="item-title">Kain Mori</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Kain Mori</strong> adalah kain putih polos yang digunakan sebagai dasar untuk membatik.</p>
+      </div>
+    </div>
 
-    .bahan {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5vw;  
-    margin-left:20vw; 
-    margin-top:3vw;
-    justify-content: center;
+    <div class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/remasol.jpg" alt="Remasol">
+        <div class="item-title">Remasol (Pewarna)</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Remasol</strong> adalah jenis pewarna tekstil yang larut dalam air dan memberikan warna cerah.</p>
+      </div>
+    </div>
 
-  }
-.item.open .details {
-  transform: translateY(0);
-}
+    <div class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/kompor.jpg" alt="Kompor">
+        <div class="item-title">Kompor</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Kompor</strong> digunakan untuk memanaskan lilin hingga mencair sebelum digunakan dengan canting.</p>
+      </div>
+    </div>
 
-.item.open .item-header {
-  pointer-events: none;
-}
-.item-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  flex: 1;
-}
-  body {
-    padding: 0;
-    margin: 0;
-    font-size: 4vw;
-    background-color: #eed8c3;
-    color: #3b2f2f;
-  }
-  header {
-    background-color: #a0522d;
-    color: white;
-    text-align: center;
-    padding: 5vw 2vw;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Batik_Pattern.svg/2560px-Batik_Pattern.svg.png');
-    background-size: cover;
-    background-blend-mode: multiply;
-  }
-  ol {
-    counter-reset: step;
-    list-style: none;
-    padding: 0;
-  }
-  ol li {
-    counter-increment: step;
-    margin-bottom: 20px;
-    padding-left: 50px;
-    position: relative;
-    background: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  ol li:hover {
-    transform: translateY(-3px);
-  }
-  ol li::before {
-    content: counter(step);
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 5vw;
-    height: 5vw;
-    background: #a0522d;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:3.5vw;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-  }
-  #mori .arrow{
-    margin-top:7vw;
-  }
-  .item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  #proses img {
-    width: 60%;
-    height: auto;
-    margin-left:0;
-  }
-    #proses h3{
-      font-size:5vw;
-    }
-    .bahan{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      max-width: 600px;
-      width: 100%;
-      margin: auto;
-      margin-top:20px;
-      justify-content: center;
-  }
-  #air{
-    margin-left:55%;
-  }
-  #proses h3{
-    text-align: center;
-  }
-  .bahan img {
-    width: 100%;
-    height: auto;
-    margin-left:0;
-  }
-  h1 {
-    font-size: 10vw;
-    margin: 2vw 0;
-  }
-  h2{
-    font-size: 7vw;
-    margin: 2vw 0;
-    text-align: center;
-  }
-  h3{
-    font-size:5vw;
-  }
-  nav {
-        position:sticky;
-      top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #8b4513;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 5vw;
-    gap: 3vw;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 4vw;
-    padding: 2vw 4vw;
-    border-radius: 5vw;
-    background-color: #a0522d;
-    transition: background-color 0.3s ease;
-  }
-  nav a:hover {
-    background-color: #d2691e;
-  }
-  section {
-    padding: 4vw;
-    text-align: justify;
-  }
-  #history img,
-  #makna img,
-  #proses img{
-    width: 90%;
-    height: auto;
-    display: block;
-    margin: 4vw auto;
-    border-radius: 2vw;
-    box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.2);
-  }
-  .i1 {
-    width: 70vw;
-    height: auto;
-    margin: 4vw auto;
-    display: block;
-  }
-  .pi1 {
-    font-size: 4vw;
-    margin: 4vw 0;
-  }
-  footer {
-    background-color: #a0522d;
-    color:white;
-    text-align: center;
-    padding: 4vw 2vw;
-    font-size: 3.5vw;
-  }
-  .item{
-    background: #8a5004;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: center;
-    color:white;
-    transition: transform 0.2s;
-    font-size:3.5vw;
-  }
-  .langkah{
-    margin-right:1vw;
-  }
-  .item:hover {
-    transform: translateY(-5px);
-  }
-  #hasil p{
-    background:#ffffff;
-    padding:3vw;
-    border-radius:15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  #hasil img{
-    width:100%;
-  }
-  }
-  
-  
-  
-  
-  @media (min-width: 769px) {
-  html{
-  scroll-behavior: smooth;
-  }
-  #makna{
-    margin-bottom:5vw;
-  }
-  h3{
-  justify-content: center;
-  text-align:center;
-  }
-  #hasil p{
-    background:#ffffff;
-    padding:2vw;
-    border-radius:15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width:600px;
-  }
-  header {
-      background-color: #a0522d;
-      color: white;
-      padding: 0.5vw;
-      text-align: center;
-    }
-    .item {
-      background: #8a5004;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-      color:white;
-      transition: transform 0.2s;
-    }
-    #proses h3{
-      text-align:left;
-      margin-left:0vw;
-    }
-    nav {
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background-color: #8b4513;
-      padding: 0.5vw;
-      text-align: center;
-    }
-    #intro ol li::before {
-position: relative;
-top:10px;
-  }
-  #intro ol li {
-  position: relative;
-  padding-left: 10vw;
-  margin-bottom: 2vw;
-}
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 0.75vw;
-      font-weight: bold;
-    }
-  
-    nav a:hover {
-      text-decoration:none;
-      background-color: rgb(245, 230, 230);
-      background-blend-mode:soft-light;
-    }
-  
-    #history{
-      padding: 2vw 1vw;
-      margin-left: 3vw;
-      margin-right: 5vw;
-    }
-  
-    #makna img{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1vw;
-    }
-  
-    #makna img {
-      width: 12.5vw;
-      height: auto;
-      border-radius: 0.5vw;
-      box-shadow: 0 0.1vw 0.5vw rgba(0,0,0,0.2);
-    }
+    <div class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/wajan.jpg" alt="Wajan">
+        <div class="item-title">Wajan</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Wajan</strong> kecil dipakai untuk menampung dan melelehkan lilin di atas kompor.</p>
+      </div>
+    </div>
 
-    #history img,
-    #makna img{
-      float:right;
-      border-radius:0.5vw;
-      width:25rem;
-      height:auto;
-      border:black 3px solid;
-      box-shadow: 0 0.175vw 0.5vw rgba(0,0,0,0.2);
-    }
-    #proses{
-      padding: 0;
-      margin-left: 0;
-      margin-right: 0vw;
-    }
-    #makna h2{
-      justify-content:right;
-    }
-    h2{
-      font-size:2vw;
-      margin-left:1vw;
-    }
-    p {
-      font-size:1.25vw;
-      margin-left:2vw;
-    }
-    nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 0.75vw;
-  font-weight: bold;
-  position: relative;
-  padding: 0.5vw 1vw;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0.2vw;
-  background-color: #fdd9a0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
-  }
-  
-  nav a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 0.5vw;
-  color: #fdd9a0;
-  }
-  
-  nav a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  }
-  
-    .i1{
-      height:auto;
-      width:12.5vw;
-    }
-    .pi1{
-      padding-bottom:0.5vw;
-    }
-    img{
-      margin-right:0vw;
-      display: flex;
-      flex-wrap: wrap;
-      margin-left:0vw;
-    }
-    #makna{
-      gap:0.5vw;
-    }
-    h1{
-      font-size:2vw;
-    }
-    #proses img {
-      margin-left: 0;
-      width:10vw;
-      margin-right: 0;
-      display: block;
-    }
-    #proses h3{
-      font-size:2vw;
-    }
-    .bahan {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5vw; 
-    max-width: 600px; 
-    margin-left:10vw; 
-    margin-top:3vw;
-  }
+    <div class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/waterglass.jpg" alt="Waterglass">
+        <div class="item-title">Waterglass</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Waterglass</strong> digunakan untuk mengikat warna agar tidak mudah luntur saat pencucian.</p>
+      </div>
+    </div>
 
-  
-  #proses img{
-    float:right;
-    border-radius:0.5vw;
-    width:17rem;
-    height:auto;
-    border:black 4px solid;
-    box-shadow: 0 0.175vw 0.5vw rgba(0,0,0,0.2);
-    margin-bottom:1vw;
-  
-  }
-  .footer{
-    background:#8b4513;
-    padding-left:100%;
-    position:relative;
+    <div class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/gas.jpg" alt="Gas">
+        <div class="item-title">Tabung Gas</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Tabung Gas</strong> adalah sumber panas untuk kompor dalam proses pemanasan lilin.</p>
+      </div>
+    </div>
 
-  }
-  #makna{
-    margin-bottom:10vw;
-  }
-  .item:hover {
-    transform: translateY(-5px);
-  }
-  ol {
-    counter-reset: step;
-    list-style: none;
-    padding: 0;
-  }
-  ol li {
-    counter-increment: step;
-    margin-bottom: 20px;
-    padding-left: 50px;
-    position: relative;
-    background: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  #intro ol{
-    counter-reset:step;
-  }
-#intro ol li {
-  position: relative;
-  padding-left: 7vw; /* Leave space for the circle */
-  margin-bottom: 2vw;
-  max-width: 600px;
-  width: 90%;
-  margin-left: 10vw;
-  margin-right: auto;
-  background: #fff;
-  border-radius: 8px;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  display: flex; /* Use flex to align items */
-}
+    <div id="air" class="item" onclick="toggleDetails(this)">
+      <div class="item-header">
+        <img src="imgs/air.jpg" alt="Air">
+        <div class="item-title">Air</div>
+        <div class="arrow"></div>
+      </div>
+      <div class="details">
+        <p><strong>Air</strong> digunakan untuk mencampur pewarna, membersihkan kain, dan proses pelorodan.</p>
+      </div>
+    </div>
 
-#intro ol li::before {
-  content: counter(step);
-  position: absolute;
-  left: 1vw;
-  width: 5vw;
-  height: 5vw;
-  background: #a0522d;
-  color: white;
-  font-weight: bold;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3vw;
-  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-}
-#intro h3 {
-  text-align: left;
-  margin-left:6vw;
-}
-  ol li:hover {
-    transform: translateY(-3px);
-  }
-  ol li::before {
-    content: counter(step);
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    width: 2vw;
-    height: 2vw;
-    background: #a0522d;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1em;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-    #intro ol li::before {
-    content: counter(step);
-    position: absolute;
-    left: 15px;
-    top: 10px;
-    width: 2vw;
-    height: 2vw;
-    background: #a0522d;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1em;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-  #hasil{
-    margin-left:2vw;
-    margin-bottom:10.5vw;
-  }
-  #hasil img{
-    margin-right:1000px;
-    height: auto;
-    float:right;
-    width:40vw;
-    display: block;
-    margin: 4vw auto;
-    border-radius: 2vw;
-    position:relative;
-    bottom:100px;
-    right:100px;
-  }
-    .item {
-  transition: transform 0.2s ease; /* good */
-}
-.item:hover {
-  transform: scale(1.03); /* slightly grow visually */
-}
-.bahan {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
+  </div>
+</section>
+    <div id="langkah" class="langkah"></div>
+    <h2>Langkah-Langkah Membuat Batik</h2>
+    <ol>
+        <li>
+            <p><strong>Menyiapkan Alat dan Bahan:</strong> Siapkan kain putih, canting, lilin/malam, pewarna dan kompor.</p>
+        </li>
+        <li>
+            <p><strong>Membuat Pola:</strong> Gambarlah pola batik di atas kain menggunakan pensil.</p>
+        </li>
+        <li>
+            <p><strong>Mencanting:</strong> Panaskan lilin, kemudian gunakan canting untuk menutup garis-garis pola dengan lilin.</p>
+        </li>
+        <li>
+            <p><strong>Pewarnaan:</strong> Campur bubuk remasol dengan air lalu celupkan kain ke dalam larutan pewarna sesuai keinginan ataupun juga bisa menggunakan kuas atau alat lain untuk mengoleskannya pada kain..</p>
+        </li>
+        <li>
+          <p><strong>Pengikatan Warna:</strong> Oleskan waterglass pada kain secara menyeluruh. Proses ini bisa dilakukan bersamaan dengan proses pewarnaan dengan cara mencampur larutan pewarna dengan waterglass secukupnya. Sehingga larutan pewarna akan memiliki sifat yang sama seperti waterglass yaitu mengikat warna.</p>
+        </li>
+        <li>
+            <p><strong>Pengeringan:</strong> Jemur kain hingga kering sempurna.</p>
+        </li>
+        <li>
+            <p><strong>Pelorodan:</strong> Rebus kain dalam air panas untuk menghilangkan lilin dan memperlihatkan motif batik.</p>
+        </li>
+    </ol>
+  </section>
+  <section id="hasil">
+    <h2>Hasil Akhir dan Kesimpulan</h2>
+    <img src="imgs/hasil.jpg">
+    <p>Gambar diatas merupakan <strong>hasil akhir </strong>kami mencoba membuat Batik Parang. Memang terdapat beberapa <strong>kesalahan</strong> yaitu menuangkan lilin terlalu banyak dan juga lilin kadang menetes dari canting. <br>
+      <strong>Dengan proyek P5 kali ini</strong>, kami dapat belajar lebih banyak mengenai ragam hias Nusantara terutama Batik Nusantara. Tidak hanya mengenai pengetahuan dasarnya, namun kami juga praktek membuat Batik sehingga kami juga tahu proses pembuatannya.
+    </p>
+  </section>
 
-.item {
-  position: relative;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
 
-.item img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.caption {
-  margin-top: 8px;
-  font-weight: bold;
-}
-.item {
-  width: 18vw;
-  background-color: #a65b2f;
-  border-radius: 12px;
-  overflow: hidden;
-  padding-bottom: 40px;
-  cursor: pointer;
-}
-#intro h2{
-  margin-left:4vw;
-}
-#intro h3{
-  justify-content: left;
-}
-.arrow {
-  position:relative;
-  width: 0;
-  height: 0;
-  margin: 10px auto 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 10px solid #333;
-  transition: transform 0.3s ease ;
-  z-index:100;
-
-}
-
-.details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-color: rgba(160, 82, 45, 0.85);
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  padding: 20px;
-  z-index: 2;
-  box-sizing: border-box;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.details p{
-  margin-top:5vw;
-    opacity:1;
-    text-align:center;
-    margin-right:15px;
-}
-.item.open .arrow {
-      transition: transform 0.3s ease;
-  transform: translateY(-18vw) rotate(180deg);
-  overflow:visible;
-  z-index: 3;
-}
-
-    .bahan {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5vw;  
-    margin-left:20vw; 
-    margin-top:3vw;
-
-  }
-.item.open .details {
-  transform: translateY(0);
-}
-
-.item.open .item-header {
-  pointer-events: none;
-}
-.item-title {
-  font-size: 1.1rem;
-  font-weight: bold;
-  flex: 1;
-}
-
-  }
+  <footer>
+  </footer>
+  <div class="footer"></div>
+</body>
+</html>
