@@ -22,12 +22,14 @@
   * {
     box-sizing: border-box;
   }
+  html{
+    scroll-padding-top: 17vh;
+  }
   #intro ol li::before {
     content: counter(step);
     position: absolute;
     left: 10px;
     top: 15px;
-    width: vw;
     height: 5vw;
     background: #a0522d;
     color: rgb(255, 255, 255);
@@ -344,6 +346,7 @@
   @media (min-width: 769px) {
   html{
   scroll-behavior: smooth;
+  scroll-padding-top: 2vw;
   }
   #makna{
     margin-bottom:5vw;
@@ -658,6 +661,9 @@ top:10px;
   }
     .item {
   transition: transform 0.2s ease; /* good */
+}
+#intro h2{
+  margin-top:5vw;
 }
 .item:hover {
   transform: scale(1.03); /* slightly grow visually */
