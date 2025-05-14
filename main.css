@@ -1,11 +1,6 @@
-@font-face{
-  font-family: 'Verve';
-  src: url("verve/Verve.ttf");
-  }
   *, *::before, *::after {
   box-sizing: border-box;
 }
-
   body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0vw;
@@ -53,10 +48,6 @@
   }
       .item {
   transition: transform 0.2s ease;
-}
-.item:hover .arrow{
-  transition: transform 0.3s ease;
-  transform: scale(1.2); 
 }
 .bahan {
   display: flex;
